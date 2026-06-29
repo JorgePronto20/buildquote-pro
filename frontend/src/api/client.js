@@ -18,8 +18,8 @@ export async function apiFetch(path, options = {}) {
     data = {}
   }
 
-  if (!res.ok) throw new Error(data.error || data.message || 'Erro na API')
-  return data
+  if (!res.ok) throw new Error(data.message || data.error || 'Erro na API')
+  return data.data ?? data
 }
 
 export function jsonOptions(method, body) {

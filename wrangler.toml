@@ -5,7 +5,6 @@ compatibility_date = "2026-06-29"
 [vars]
 APP_NAME = "BuildQuote Pro"
 APP_ENV = "production"
-JWT_SECRET = "CHANGE_ME_USE_WRANGLER_SECRET_IN_PRODUCTION"
 CORS_ORIGIN = "*"
 
 [[d1_databases]]
