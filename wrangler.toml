@@ -11,11 +11,11 @@ CORS_ORIGIN = "*"
 [[d1_databases]]
 binding = "DB"
 database_name = "buildquote_pro_db"
-database_id = "REPLACE_WITH_D1_ID"
+database_id = "7b847a9c-7d20-4949-9a34-3124e2652d40"
 
 [[kv_namespaces]]
 binding = "APP_KV"
-id = "REPLACE_WITH_KV_ID"
+id = "9da8e7f762c642f9ada92b89415bedb7"
 
 [[r2_buckets]]
 binding = "FILES_BUCKET"

@@ -52,8 +52,8 @@ export async function verifyJwt(token, secret) {
 export async function hashPassword(password) {
   const salt = crypto.getRandomValues(new Uint8Array(16));
   const key = await crypto.subtle.importKey('raw', encoder.encode(password), 'PBKDF2', false, ['deriveBits']);
-  const bits = await crypto.subtle.deriveBits({ name: 'PBKDF2', salt, iterations: 120000, hash: 'SHA-256' }, key, 256);
-  return `pbkdf2_sha256$120000$${base64UrlEncode(salt)}$${base64UrlEncode(new Uint8Array(bits))}`;
+  const bits = await crypto.subtle.deriveBits({ name: 'PBKDF2', salt, iterations: 100000, hash: 'SHA-256' }, key, 256);
+  return `pbkdf2_sha256$100000$${base64UrlEncode(salt)}$${base64UrlEncode(new Uint8Array(bits))}`;
 }
 
 export async function verifyPassword(password, storedHash) {

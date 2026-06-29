@@ -1,8 +1,6 @@
 -- BuildQuote Pro - Fase 1 MVP
 -- Migration 0002: orçamentos, zonas, itens, regras e materiais
 
-PRAGMA foreign_keys = ON;
-
 CREATE TABLE IF NOT EXISTS quotes (
   id TEXT PRIMARY KEY,
   professional_id TEXT NOT NULL,

@@ -1,8 +1,6 @@
 -- BuildQuote Pro - Fase 1 MVP
 -- Migration 0001: utilizadores, profissionais e módulos
 
-PRAGMA foreign_keys = ON;
-
 CREATE TABLE IF NOT EXISTS users (
   id TEXT PRIMARY KEY,
   name TEXT NOT NULL,
