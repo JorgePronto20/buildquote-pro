@@ -5,7 +5,9 @@ export function isPublicRoute(pathname) {
   return pathname === '/api/health' ||
     pathname.startsWith('/api/auth/register') ||
     pathname.startsWith('/api/auth/login') ||
-    pathname.startsWith('/api/quotes/public/');
+    pathname.startsWith('/api/quotes/public/') ||
+    pathname.startsWith('/api/brands') ||
+    pathname.startsWith('/api/catalog');
 }
 
 export async function requireAuth(request, env) {

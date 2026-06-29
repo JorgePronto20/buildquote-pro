@@ -5,6 +5,8 @@ import { handleProfessionalRoutes } from './modules/professionals/routes.js';
 import { handleQuoteRoutes } from './modules/quotes/routes.js';
 import { handleMaterialRoutes } from './modules/materials/routes.js';
 import { handleProfessionEngineRoutes } from './modules/profession-engine/routes.js';
+import { handleCatalogRoutes } from './modules/catalog/routes.js';
+import { handleApprovalRoutes } from './modules/approval/routes.js';
 
 export async function routeRequest(request, env) {
   const url = new URL(request.url);
@@ -31,9 +33,11 @@ export async function routeRequest(request, env) {
     const handlers = [
       handleAuthRoutes,
       handleProfessionalRoutes,
+      handleApprovalRoutes,
       handleQuoteRoutes,
       handleMaterialRoutes,
-      handleProfessionEngineRoutes
+      handleProfessionEngineRoutes,
+      handleCatalogRoutes
     ];
 
     for (const handler of handlers) {
