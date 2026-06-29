@@ -11,7 +11,10 @@ export const QUOTE_STATUSES = [
   { value: 'draft', label: 'Rascunho', color: 'bg-gray-100 text-gray-700 ring-gray-200' },
   { value: 'sent', label: 'Enviado', color: 'bg-blue-100 text-blue-700 ring-blue-200' },
   { value: 'accepted', label: 'Aceite', color: 'bg-emerald-100 text-emerald-700 ring-emerald-200' },
+  { value: 'accepted_pending_professional', label: 'Aceite pelo cliente', color: 'bg-amber-100 text-amber-800 ring-amber-200' },
+  { value: 'accepted_paid', label: 'Aprovado pelo profissional', color: 'bg-green-100 text-green-700 ring-green-200' },
   { value: 'approved', label: 'Aprovado', color: 'bg-green-100 text-green-700 ring-green-200' },
+  { value: 'rejected', label: 'Rejeitado', color: 'bg-red-100 text-red-700 ring-red-200' },
   { value: 'cancelled', label: 'Anulado', color: 'bg-red-100 text-red-700 ring-red-200' },
 ]
 

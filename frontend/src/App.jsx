@@ -9,6 +9,7 @@ import QuoteNew from './pages/Quotes/QuoteNew'
 import QuoteDetail from './pages/Quotes/QuoteDetail'
 import QuotePublic from './pages/Quotes/QuotePublic'
 import Materials from './pages/Materials'
+import Catalog from './pages/Catalog'
 import Settings from './pages/Settings'
 
 function ProtectedRoute({ children }) {
@@ -36,6 +37,7 @@ export default function App() {
         <Route path="quotes/new" element={<QuoteNew />} />
         <Route path="quotes/:id" element={<QuoteDetail />} />
         <Route path="materials" element={<Materials />} />
+        <Route path="catalog" element={<Catalog />} />
         <Route path="settings" element={<Settings />} />
       </Route>
       <Route path="*" element={<Navigate to="/" replace />} />

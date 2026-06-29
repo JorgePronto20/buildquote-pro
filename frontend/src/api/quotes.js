@@ -11,7 +11,8 @@ export const quotesApi = {
   remove: (id) => apiFetch(`/api/quotes/${id}`, { method: 'DELETE' }),
   duplicate: (id) => apiFetch(`/api/quotes/${id}/duplicate`, { method: 'POST' }),
   send: (id) => apiFetch(`/api/quotes/${id}/send`, { method: 'POST' }),
-  approve: (id) => apiFetch(`/api/quotes/${id}/approve`, { method: 'POST' }),
+  approval: (id) => apiFetch(`/api/quotes/${id}/approval`),
+  approve: (id, payload = {}) => apiFetch(`/api/quotes/${id}/approve`, jsonOptions('POST', payload)),
   cancel: (id) => apiFetch(`/api/quotes/${id}/cancel`, { method: 'POST' }),
   addZone: (id, payload) => apiFetch(`/api/quotes/${id}/zones`, jsonOptions('POST', payload)),
   updateZone: (id, zoneId, payload) => apiFetch(`/api/quotes/${id}/zones/${zoneId}`, jsonOptions('PUT', payload)),
@@ -20,5 +21,6 @@ export const quotesApi = {
   updateItem: (id, itemId, payload) => apiFetch(`/api/quotes/${id}/items/${itemId}`, jsonOptions('PUT', payload)),
   deleteItem: (id, itemId) => apiFetch(`/api/quotes/${id}/items/${itemId}`, { method: 'DELETE' }),
   getPublic: (token) => apiFetch(`/api/quotes/public/${token}`),
-  acceptPublic: (token) => apiFetch(`/api/quotes/public/${token}/accept`, { method: 'POST' }),
+  acceptPublic: (token, payload = {}) => apiFetch(`/api/quotes/public/${token}/accept`, jsonOptions('POST', payload)),
+  rejectPublic: (token, payload = {}) => apiFetch(`/api/quotes/public/${token}/reject`, jsonOptions('POST', payload)),
 }
