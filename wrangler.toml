@@ -1,0 +1,22 @@
+name = "buildquote-pro-api"
+main = "src/worker.js"
+compatibility_date = "2026-06-29"
+
+[vars]
+APP_NAME = "BuildQuote Pro"
+APP_ENV = "production"
+JWT_SECRET = "CHANGE_ME_USE_WRANGLER_SECRET_IN_PRODUCTION"
+CORS_ORIGIN = "*"
+
+[[d1_databases]]
+binding = "DB"
+database_name = "buildquote_pro_db"
+database_id = "REPLACE_WITH_D1_ID"
+
+[[kv_namespaces]]
+binding = "APP_KV"
+id = "REPLACE_WITH_KV_ID"
+
+[[r2_buckets]]
+binding = "FILES_BUCKET"
+bucket_name = "buildquote-pro-files"

@@ -1,0 +1,15 @@
+{
+  "name": "buildquote-pro-api",
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "db:migrate": "wrangler d1 migrations apply buildquote_pro_db",
+    "db:migrate:local": "wrangler d1 migrations apply buildquote_pro_db --local",
+    "check": "node --check src/worker.js && node --check src/router.js"
+  },
+  "devDependencies": {
+    "wrangler": "^3.0.0"
+  }
+}
